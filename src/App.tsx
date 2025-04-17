@@ -1,6 +1,7 @@
 import "./App.css";
 import { Link, Route, Routes } from "react-router-dom";
 import { PublcHolidays } from "./pages/PublcHolidays";
+import { Accordion } from "./pages/Accordion";
 
 function App() {
   return (
@@ -13,12 +14,14 @@ function App() {
         <Route
           path="/"
           element={
-            <>
+            <div className="flex flex-col items-center justify-center">
               <Link to={"/public-holidays"}>Public Holidays</Link>
-            </>
+              <Link to={"/accordion"}>Accordion</Link>
+            </div>
           }
         />
         <Route path="/public-holidays" element={<PublcHolidays />} />
+        <Route path="/accordion" element={<Accordion />} />
       </Routes>
     </>
   );
